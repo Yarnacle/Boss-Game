@@ -1,0 +1,25 @@
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\fontOne.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\menu image.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\black square.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\leftArrow.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\rightArrow.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\lockedBorder.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\worldSelectBorder.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Content\temp image.xnb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\boss_game_thing.exe
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\boss_game_thing.pdb
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\obj\x86\Debug\ARMBFS.csproj.CoreCompileInputs.cache
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\obj\x86\Debug\ARMBFS.csproj.CopyComplete
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\obj\x86\Debug\boss_game_thing.exe
+C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thing\obj\x86\Debug\boss_game_thing.pdb
