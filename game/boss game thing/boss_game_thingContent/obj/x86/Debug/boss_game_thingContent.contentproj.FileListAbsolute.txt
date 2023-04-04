@@ -1,8 +1,0 @@
-C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.AssemblyReference.cache
-C:\Users\cryno\source\repos\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.CoreCompileInputs.cache
-C:\Users\cryno\Downloads\boss game thing yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.AssemblyReference.cache
-C:\Users\cryno\Downloads\boss game thing yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.CoreCompileInputs.cache
-C:\Users\yarna\Downloads\boss_game_thing_yayyyyyyy\boss game thing yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.AssemblyReference.cache
-C:\Users\yarna\Downloads\boss_game_thing_yayyyyyyy\boss game thing yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.CoreCompileInputs.cache
-C:\Users\yarna\Downloads\boss_game_thing_yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.AssemblyReference.cache
-C:\Users\yarna\Downloads\boss_game_thing_yayyyyyyy\boss game thing\boss game thing\boss_game_thingContent\obj\x86\Debug\boss_game_thingContent.contentproj.CoreCompileInputs.cache
