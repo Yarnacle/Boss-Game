@@ -12,28 +12,35 @@ namespace Boss_Game_2._0
         // EXAMPLE: To access a texture called "Texture" in the subdirectory "MainMenu", use "TextureManager.MainMenu.Texture"
         // NOTE: There can be more than 1 layer of subdirectories (it is possible to have "TextureManager.Layer1.Layer2.Layer3.Texture")
         public static dynamic MainMenu;
-        public static dynamic OptionsMenu;
+        public static dynamic Shop;
         public static dynamic Textures;
+        public static dynamic BossMenu;
 
         public static void Initialize(ContentManager content)
         {
 
             // Subdirectory initialization
             MainMenu = new ExpandoObject();
-            OptionsMenu = new ExpandoObject();
+            Shop = new ExpandoObject();
             Textures = new ExpandoObject();
+            BossMenu = new ExpandoObject();
 
 
             // Texture initialization
 
             // This maps the reference "TextureManager.MainMenu.Menu" to the respective file in the content folder
             MainMenu.Menu = content.Load<Texture2D>("Textures\\MainMenu\\Menu"); // remember to include subdirectories in the path of the file
-            MainMenu.SelectionArrow = content.Load<Texture2D>("Textures\\MainMenu\\SelectionArrow");
             MainMenu.SelectionUnderline = content.Load<Texture2D>("Textures\\MainMenu\\SelectionUnderline");
 
-            OptionsMenu.Menu = content.Load<Texture2D>("Textures\\OptionsMenu\\Menu");
+            Shop.Menu = content.Load<Texture2D>("Textures\\Shop\\Menu");
 
             Textures.SolidFill = content.Load<Texture2D>("Textures\\SolidFill");
+            Textures.RightArrow = content.Load<Texture2D>("Textures\\RightArrow");
+            Textures.LeftArrow = content.Load<Texture2D>("Textures\\LeftArrow");
+            Textures.Placeholder = content.Load<Texture2D>("Textures\\Placeholder");
+            Textures.TextBox = content.Load<Texture2D>("Textures\\TextBox");
+
+            BossMenu.Menu = content.Load<Texture2D>("Textures\\BossMenu\\Menu");
         }
     }
 }

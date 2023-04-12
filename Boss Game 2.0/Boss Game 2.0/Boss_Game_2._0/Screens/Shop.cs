@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Boss_Game_2._0.Screens
 {
-    class OptionsMenu : Screen
+    class Shop : Screen
     {
-        public OptionsMenu(SpriteBatch spriteBatch) : base(spriteBatch)
+        public Shop(SpriteBatch spriteBatch) : base(spriteBatch)
         {
             this.spriteBatch = spriteBatch;
         }
@@ -26,7 +26,7 @@ namespace Boss_Game_2._0.Screens
 
         public override void Draw()
         {
-            spriteBatch.Draw(TextureManager.OptionsMenu.Menu, window, Color.White);
+            spriteBatch.Draw(TextureManager.Shop.Menu, Window, Color.White);
         }
     }
 }

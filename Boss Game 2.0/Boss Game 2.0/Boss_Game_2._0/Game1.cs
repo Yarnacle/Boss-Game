@@ -48,7 +48,7 @@ namespace Boss_Game_2._0
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ScreenManager.Initialize(spriteBatch);
+            ScreenManager.Initialize(spriteBatch, this);
             ScreenManager.SetScreen(ScreenManager.MainMenu);
         }
 
@@ -87,7 +87,7 @@ namespace Boss_Game_2._0
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
             ScreenManager.Draw();

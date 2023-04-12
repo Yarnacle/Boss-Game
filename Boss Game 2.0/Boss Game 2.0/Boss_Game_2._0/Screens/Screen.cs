@@ -5,7 +5,8 @@ namespace Boss_Game_2._0.Screens
 {
     class Screen
     {
-        public static Rectangle window = new Rectangle(0, 0, 800, 800);
+        public static Rectangle Window = new Rectangle(0, 0, 800, 800);
+        public static Rectangle ReturnFlag = new Rectangle(0, 95, 44, 54);
 
         public SpriteBatch spriteBatch;
 
@@ -20,6 +21,11 @@ namespace Boss_Game_2._0.Screens
         }
 
         public virtual void Draw()
+        {
+
+        }
+
+        public virtual void Reset()
         {
 
         }

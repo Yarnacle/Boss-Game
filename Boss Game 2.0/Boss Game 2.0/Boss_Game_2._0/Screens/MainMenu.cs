@@ -11,13 +11,15 @@ namespace Boss_Game_2._0.Screens
 
         TimeSpan timer;
         bool showSelectionUnderline;
-
-        //static string[] options = new string[]{ScreenManager.SelectLevel, ScreenManager.Options, ScreenManager.Quit};
+        Color SelectionColor;
 
         public MainMenu(SpriteBatch spriteBatch) : base(spriteBatch)
         {
             selection = 0;
             timer = new TimeSpan(0, 0, 0);
+
+            SelectionColor = Color.Yellow;
+            showSelectionUnderline = true;
         }
 
         public override void Update(GameTime gameTime)
@@ -44,7 +46,8 @@ namespace Boss_Game_2._0.Screens
             }
             else if (Game1.IsKeyPressed(kb, Keys.Z))
             {
-                ScreenManager.SetScreen(ScreenManager.OptionsMenu); // TODO: make it so you can access screens other than options
+                SelectionColor = Color.White;
+                ScreenManager.SetScreen(new Screen[] { ScreenManager.BossMenu, ScreenManager.Shop, ScreenManager.Quit }[selection]);
             }
 
             Game1.oldKb = kb;
@@ -52,13 +55,21 @@ namespace Boss_Game_2._0.Screens
 
         public override void Draw()
         {
-            spriteBatch.Draw(TextureManager.MainMenu.Menu, window, Color.White);
-            spriteBatch.Draw(TextureManager.MainMenu.SelectionArrow, new Rectangle(300, 500 + selection * 93, 32, 32), Color.Yellow);
+            spriteBatch.Draw(TextureManager.MainMenu.Menu, Window, Color.White);
+            spriteBatch.Draw(TextureManager.Textures.RightArrow, new Rectangle(300, 500 + selection * 93, 32, 32), SelectionColor);
 
             if (showSelectionUnderline)
             {
-                spriteBatch.Draw(TextureManager.MainMenu.SelectionUnderline, new Rectangle(335, 550 + selection * 93, 136, 5), Color.Yellow);
+                spriteBatch.Draw(TextureManager.MainMenu.SelectionUnderline, new Rectangle(335, 550 + selection * 93, 136, 5), SelectionColor);
             }
+        }
+
+        public override void Reset()
+        {
+            SelectionColor = Color.Yellow;
+            showSelectionUnderline = true;
+            timer = TimeSpan.Zero;
+            selection = 0;
         }
     }
 }
