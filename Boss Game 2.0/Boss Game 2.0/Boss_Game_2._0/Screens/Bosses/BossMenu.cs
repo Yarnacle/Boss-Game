@@ -21,13 +21,13 @@ namespace Boss_Game_2._0.Screens.Bosses
             KeyboardState kb = Keyboard.GetState();
             bosses = new Boss[] { ScreenManager.Bosses.Boss1 };
 
-            if (Game1.IsKeyPressed(kb, Keys.Right))
+            if (Game1.IsKeyPressed(kb, Keys.Left))
             {
                 selection = Math.Max(0, selection - 1);
             }
-            else if (Game1.IsKeyPressed(kb, Keys.Left))
+            else if (Game1.IsKeyPressed(kb, Keys.Right))
             {
-                selection = Math.Min(2, selection + 1);
+                selection = Math.Min(0, selection + 1);
             }
             else if (Game1.IsKeyPressed(kb, Keys.Z))
             {
