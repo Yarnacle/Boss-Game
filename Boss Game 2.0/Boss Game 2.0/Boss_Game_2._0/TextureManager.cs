@@ -15,6 +15,7 @@ namespace Boss_Game_2._0
         public static dynamic Shop;
         public static dynamic Textures;
         public static dynamic BossMenu;
+        public static dynamic Bosses;
 
         public static void Initialize(ContentManager content)
         {
@@ -24,6 +25,9 @@ namespace Boss_Game_2._0
             Shop = new ExpandoObject();
             Textures = new ExpandoObject();
             BossMenu = new ExpandoObject();
+
+            Bosses = new ExpandoObject();
+            Bosses.Boss1 = new ExpandoObject();
 
 
             // Texture initialization
@@ -41,6 +45,10 @@ namespace Boss_Game_2._0
             Textures.TextBox = content.Load<Texture2D>("Textures\\TextBox");
 
             BossMenu.Menu = content.Load<Texture2D>("Textures\\BossMenu\\Menu");
+
+            Bosses.PauseOverlay = content.Load<Texture2D>("Textures\\Bosses\\PauseOverlay");
+
+            Bosses.Boss1.Boss = content.Load<Texture2D>("Textures\\Bosses\\Boss1\\Boss");
         }
     }
 }

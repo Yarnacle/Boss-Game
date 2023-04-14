@@ -8,37 +8,37 @@ namespace Boss_Game_2._0.Screens.Bosses
     class BossMenu : Screen
     {
         int selection;
-        Boss[] bosses;
+        BossScreen[] bosses;
 
         public BossMenu(SpriteBatch spriteBatch) : base(spriteBatch)
         {
             selection = 0;
-            bosses = new Boss[0];
+            bosses = new BossScreen[0];
         }
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState kb = Keyboard.GetState();
-            bosses = new Boss[] { ScreenManager.Bosses.Boss1 };
+            Game1.kb = Keyboard.GetState();
+            bosses = new BossScreen[] { ScreenManager.Bosses.Boss1 };
 
-            if (Game1.IsKeyPressed(kb, Keys.Left))
+            if (Game1.IsKeyPressed(Keys.Left))
             {
                 selection = Math.Max(0, selection - 1);
             }
-            else if (Game1.IsKeyPressed(kb, Keys.Right))
+            else if (Game1.IsKeyPressed(Keys.Right))
             {
                 selection = Math.Min(0, selection + 1);
             }
-            else if (Game1.IsKeyPressed(kb, Keys.Z))
+            else if (Game1.IsKeyPressed(Keys.Z))
             {
                 ScreenManager.SetScreen(bosses[selection]); // TODO: make it so you can access screens other than options
             }
-            else if (Game1.IsKeyPressed(kb, Keys.X))
+            else if (Game1.IsKeyPressed(Keys.X))
             {
                 ScreenManager.SetScreen(ScreenManager.MainMenu);
             }
 
-            Game1.oldKb = kb;
+            Game1.UpdateOldKb();
         }
 
         public override void Draw()

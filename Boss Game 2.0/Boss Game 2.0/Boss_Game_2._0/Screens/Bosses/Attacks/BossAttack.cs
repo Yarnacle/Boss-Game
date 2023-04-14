@@ -5,14 +5,15 @@ using System.Collections.Generic;
 
 namespace Boss_Game_2._0.Screens.Bosses.Attacks
 {
-    class Attack
+    class BossAttack
     {
         public List<Projectile> projectiles;
         public SpriteBatch spriteBatch;
         public TimeSpan timer;
         public int projectileSpeed;
+        public bool isAttacking;
 
-        public Attack(SpriteBatch spriteBatch, int projectileSpeed)
+        public BossAttack(SpriteBatch spriteBatch, int projectileSpeed)
         {
             timer = new TimeSpan(0, 0, 0);
             this.spriteBatch = spriteBatch;
@@ -22,10 +23,16 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
 
         public virtual void Update(GameTime gameTime)
         {
-            for (int i = 0; i < projectiles.Count; i++)
+            for (int i = projectiles.Count - 1; i >= 0; i--)
             {
-                projectiles[i].Update(gameTime);
+                Projectile projectile = projectiles[i];
+                projectile.Update(gameTime);
+                if (projectile.x >= 800 || projectile.y >= 800 || projectile.x + projectile.rectangle.Width <= 0 || projectile.y + projectile.rectangle.Height <= 0)
+                {
+                    projectiles.RemoveAt(i);
+                }
             }
+            Console.WriteLine(projectiles.Count);
 
             timer += gameTime.ElapsedGameTime;
         }
@@ -36,6 +43,16 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
             {
                 projectiles[i].Draw();
             }
+        }
+
+        public void Start()
+        {
+            isAttacking = true;
+        }
+
+        public void Stop()
+        {
+            isAttacking = false;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Boss_Game_2._0.Screens
 
             BossMenu = new BossMenu(spriteBatch);
             Bosses = new ExpandoObject();
-            Bosses.Boss1 = new Boss1(spriteBatch);
+            Bosses.Boss1 = new Boss1Screen(spriteBatch);
         }
         public static void SetScreen(Screen screen)
         {
@@ -39,12 +39,12 @@ namespace Boss_Game_2._0.Screens
             currentScreen = screen;
             if (prevScreen != null) // If the game has not freshly been booted
             {
-                if (currentScreen.GetType().IsSubclassOf(typeof(Boss)))
+                if (currentScreen.GetType().IsSubclassOf(typeof(BossScreen)))
                 {
                     transition = new Transition2(spriteBatch, 4000, prevScreen);
                 }
                 else {
-                    transition = new Transition1(spriteBatch, 5000, prevScreen); // 5000 default speed
+                    transition = new Transition3(spriteBatch, 5000, prevScreen); // 5000 default speed
                 }
             }
         }

@@ -9,8 +9,8 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
         SpriteBatch spriteBatch;
         Texture2D texture;
         public Rectangle rectangle;
-        float x;
-        float y;
+        public float x;
+        public float y;
         float xVel; // PIXELS PER SECOND
         float yVel;
         float xAccel; // PIXELS PER SECOND SQUARED
@@ -19,8 +19,8 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
 
         public Projectile(SpriteBatch spriteBatch, Texture2D texture, float x, float y, float xVel, float yVel, float xAccel, float yAccel, int size)
         {
-            this.texture = texture;
             this.spriteBatch = spriteBatch;
+            this.texture = texture;
             this.x = x;
             this.y = y;
             this.xVel = xVel;

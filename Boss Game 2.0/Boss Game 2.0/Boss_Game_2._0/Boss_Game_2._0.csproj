@@ -15,8 +15,7 @@
     <XnaProfile>Reach</XnaProfile>
     <XnaCrossPlatformGroupID>ce7e5a28-1405-4994-ab46-67eb0bbbdc51</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -72,10 +71,10 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Screens\Bosses\Attacks\Attack.cs" />
+    <Compile Include="Screens\Bosses\Attacks\BossAttack.cs" />
     <Compile Include="Screens\Bosses\Attacks\Spiral.cs" />
-    <Compile Include="Screens\Bosses\Boss.cs" />
-    <Compile Include="Screens\Bosses\Boss1.cs" />
+    <Compile Include="Screens\Bosses\BossScreen.cs" />
+    <Compile Include="Screens\Bosses\Boss1Screen.cs" />
     <Compile Include="Screens\Bosses\BossMenu.cs" />
     <Compile Include="Screens\Bosses\Attacks\Projectile.cs" />
     <Compile Include="Screens\MainMenu.cs" />

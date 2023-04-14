@@ -14,14 +14,14 @@ namespace Boss_Game_2._0.Screens
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState kb = Keyboard.GetState();
+            Game1.kb = Keyboard.GetState();
 
-            if (Game1.IsKeyPressed(kb, Keys.X))
+            if (Game1.IsKeyPressed(Keys.X))
             {
                 ScreenManager.SetScreen(ScreenManager.MainMenu);
             }
 
-            Game1.oldKb = kb;
+            Game1.UpdateOldKb();
         }
 
         public override void Draw()

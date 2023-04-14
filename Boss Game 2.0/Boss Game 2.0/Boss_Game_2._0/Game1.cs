@@ -18,7 +18,8 @@ namespace Boss_Game_2._0
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public static KeyboardState oldKb = Keyboard.GetState();
+        public static KeyboardState kb = Keyboard.GetState();
+        public static KeyboardState oldKb;
 
         public Game1()
         {
@@ -98,9 +99,18 @@ namespace Boss_Game_2._0
 
         }
 
-        public static bool IsKeyPressed(KeyboardState kb,Keys key)
+        public static bool IsKeyPressed(Keys key)
         {
+            if (oldKb == null)
+            {
+                return kb.IsKeyDown(key);
+            }
             return kb.IsKeyDown(key) && !oldKb.IsKeyDown(key);
+        }
+
+        public static void UpdateOldKb()
+        {
+            oldKb = kb;
         }
     }
 }

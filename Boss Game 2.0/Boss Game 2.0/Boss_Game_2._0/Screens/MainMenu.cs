@@ -24,7 +24,7 @@ namespace Boss_Game_2._0.Screens
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState kb = Keyboard.GetState();
+            Game1.kb = Keyboard.GetState();
             
             // Countdown until switch toggle selection underline visibility
             timer += gameTime.ElapsedGameTime;
@@ -34,23 +34,23 @@ namespace Boss_Game_2._0.Screens
                 timer = TimeSpan.Zero;
             }
 
-            if (Game1.IsKeyPressed(kb, Keys.Up))
+            if (Game1.IsKeyPressed(Keys.Up))
             {
                 selection = Math.Max(0, selection - 1);
                 showSelectionUnderline = true; // If change selection, always show underline again
             }
-            else if (Game1.IsKeyPressed(kb, Keys.Down))
+            else if (Game1.IsKeyPressed(Keys.Down))
             {
                 selection = Math.Min(2, selection + 1);
                 showSelectionUnderline = true;
             }
-            else if (Game1.IsKeyPressed(kb, Keys.Z))
+            else if (Game1.IsKeyPressed(Keys.Z))
             {
                 SelectionColor = Color.White;
                 ScreenManager.SetScreen(new Screen[] { ScreenManager.BossMenu, ScreenManager.Shop, ScreenManager.Quit }[selection]);
             }
 
-            Game1.oldKb = kb;
+            Game1.UpdateOldKb();
         }
 
         public override void Draw()

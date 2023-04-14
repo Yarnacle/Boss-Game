@@ -4,7 +4,7 @@ using System;
 
 namespace Boss_Game_2._0.Screens.Bosses.Attacks
 {
-    class Spiral : Attack
+    class Spiral : BossAttack
     {
         float angSpeed; // radians per second
         float totalAngDisp;
@@ -34,7 +34,10 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
             
             if (angMoved >= angSpacing)
             {
-                projectiles.Add(new Projectile(spriteBatch, TextureManager.Textures.SolidFill, centerX, centerY, projectileSpeed * (float)Math.Cos(totalAngDisp), projectileSpeed * (float)Math.Sin(totalAngDisp), xAccel, yAccel, projectileSize));
+                if (isAttacking)
+                {
+                    projectiles.Add(new Projectile(spriteBatch, TextureManager.Textures.SolidFill, centerX, centerY, projectileSpeed * (float)Math.Cos(totalAngDisp), projectileSpeed * (float)Math.Sin(totalAngDisp), xAccel, yAccel, projectileSize));
+                }
                 timer = TimeSpan.Zero;
             }
 
