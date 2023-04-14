@@ -32,7 +32,6 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
                     projectiles.RemoveAt(i);
                 }
             }
-            Console.WriteLine(projectiles.Count);
 
             timer += gameTime.ElapsedGameTime;
         }
