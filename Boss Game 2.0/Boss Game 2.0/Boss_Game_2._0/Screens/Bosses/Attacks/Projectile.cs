@@ -4,7 +4,7 @@ using System;
 
 namespace Boss_Game_2._0.Screens.Bosses.Attacks
 {
-    class Projectile
+    class Projectile // Basically entity
     {
         SpriteBatch spriteBatch;
         Texture2D texture;

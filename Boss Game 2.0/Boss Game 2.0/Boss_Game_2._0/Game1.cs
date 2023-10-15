@@ -18,6 +18,8 @@ namespace Boss_Game_2._0
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+
+
         public static KeyboardState kb = Keyboard.GetState();
         public static KeyboardState oldKb;
 
@@ -50,7 +52,9 @@ namespace Boss_Game_2._0
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ScreenManager.Initialize(spriteBatch, this);
-            ScreenManager.SetScreen(ScreenManager.MainMenu);
+            ScreenManager.SetScreen(ScreenManager.StartScreen);
+
+
         }
 
         /// <summary>
@@ -76,9 +80,10 @@ namespace Boss_Game_2._0
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+
             
 
-            ScreenManager.Update(gameTime);
+                ScreenManager.Update(gameTime);
             base.Update(gameTime);
         }
 

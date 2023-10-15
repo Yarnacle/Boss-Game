@@ -4,7 +4,7 @@ using System;
 
 namespace Boss_Game_2._0.Screens.Transitions
 {
-    class Transition2 : Transition
+    class Transition2 : Transition // wave transition thing (left to right)
     {
 
         public Transition2(SpriteBatch spriteBatch, int speed, Screen prevScreen) : base(spriteBatch, speed, prevScreen)

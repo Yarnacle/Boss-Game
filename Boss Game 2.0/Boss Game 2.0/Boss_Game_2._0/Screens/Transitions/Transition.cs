@@ -5,6 +5,9 @@ using System;
 namespace Boss_Game_2._0.Screens.Transitions
 {
     class Transition : Screen
+        /*
+         * Manages everything transition related. Used in ScreenManager
+         */
     {
         public TimeSpan timer;
         public int speed; // in pixels per second; used in conjunction with seconds calculation to determine displacement

@@ -9,17 +9,27 @@ namespace Boss_Game_2._0.Screens.Bosses
     {
         int selection;
         BossScreen[] bosses;
+        string[] titles;
+
 
         public BossMenu(SpriteBatch spriteBatch) : base(spriteBatch)
         {
-            selection = 0;
             bosses = new BossScreen[0];
+            titles = new string[3];
+            selection = 0;
+
+            titles[0] = "  Tutorial Boss:\n Friendly Slime!\n  5 XP";
+            titles[1] = "  Beginner Boss:\n   Evil Seal!\n 15 XP";
+            titles[2] = "Intermediate Boss:\nMagma Salamander!\n 25 XP";
         }
 
         public override void Update(GameTime gameTime)
         {
             Game1.kb = Keyboard.GetState();
-            bosses = new BossScreen[] { ScreenManager.Bosses.Boss1 };
+            bosses = new BossScreen[] { new Boss1Screen(spriteBatch), new Boss2Screen(spriteBatch), new Boss3Screen(spriteBatch) };
+
+            
+
 
             if (Game1.IsKeyPressed(Keys.Left))
             {
@@ -27,7 +37,7 @@ namespace Boss_Game_2._0.Screens.Bosses
             }
             else if (Game1.IsKeyPressed(Keys.Right))
             {
-                selection = Math.Min(0, selection + 1);
+                selection = Math.Min(2, selection + 1);
             }
             else if (Game1.IsKeyPressed(Keys.Z))
             {
@@ -38,14 +48,31 @@ namespace Boss_Game_2._0.Screens.Bosses
                 ScreenManager.SetScreen(ScreenManager.MainMenu);
             }
 
+
+
             Game1.UpdateOldKb();
         }
 
         public override void Draw()
         {
-            spriteBatch.Draw(TextureManager.Textures.Placeholder, new Rectangle(248, 111, 320, 320), Color.White); // TODO: thumbnail for each boss
+            switch(selection)
+            {
+                case 0:
+                    spriteBatch.Draw(TextureManager.Textures.Placeholder, new Rectangle(248, 111, 320, 320), Color.White); // TODO: thumbnail for each boss
+                    break;
+                case 1:
+                    spriteBatch.Draw(TextureManager.Textures.Placeholder2, new Rectangle(248, 111, 320, 320), Color.White);
+                    break;
+                case 2:
+                    spriteBatch.Draw(TextureManager.Textures.Placeholder3, new Rectangle(248, 111, 320, 320), Color.White);
+                    break;
+
+            }
+
             spriteBatch.Draw(TextureManager.BossMenu.Menu, Window, Color.White);
             spriteBatch.Draw(TextureManager.Textures.TextBox, new Rectangle(100, 475, 600, 200), Color.White);
+
+            spriteBatch.DrawString(TextureManager.Message.SlightlyBiggerFont, titles[selection], new Vector2(230, 500), Color.White);
 
             if (selection > 0)
             {
@@ -53,7 +80,7 @@ namespace Boss_Game_2._0.Screens.Bosses
             }
             if (selection < bosses.Length - 1)
             {
-                spriteBatch.Draw(TextureManager.Textures.RightArrow, new Rectangle(692, 220, 86, 86), Color.LightGray);
+                spriteBatch.Draw(TextureManager.Textures.RightArrow, new Rectangle(620, 220, 86, 86), Color.LightGray);
             }
         }
     }

@@ -13,6 +13,8 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
         public int projectileSpeed;
         public bool isAttacking;
 
+        public int attackTime;
+
         public BossAttack(SpriteBatch spriteBatch, int projectileSpeed)
         {
             timer = new TimeSpan(0, 0, 0);
@@ -52,6 +54,26 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
         public void Stop()
         {
             isAttacking = false;
+        }
+
+        public Rectangle getList(int x)
+        {
+            return projectiles[x].rectangle;
+        }
+
+        public int getProjectilesCount()
+        {
+            return projectiles.Count;
+        }
+
+        public void remove(int i)
+        {
+            projectiles.RemoveAt(i);
+        }
+
+        public void clear()
+        {
+            projectiles.Clear();
         }
     }
 }

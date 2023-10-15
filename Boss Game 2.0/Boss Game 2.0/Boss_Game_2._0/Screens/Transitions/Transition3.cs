@@ -4,7 +4,7 @@ using System;
 
 namespace Boss_Game_2._0.Screens.Transitions
 {
-    class Transition3 : Transition
+    class Transition3 : Transition // Vertical bars transition
     {
         public Transition3(SpriteBatch spriteBatch, int speed, Screen prevScreen) : base(spriteBatch, speed, prevScreen)
         {

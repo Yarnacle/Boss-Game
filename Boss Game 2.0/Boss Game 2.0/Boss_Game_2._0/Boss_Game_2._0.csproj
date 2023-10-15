@@ -15,7 +15,7 @@
     <XnaProfile>Reach</XnaProfile>
     <XnaCrossPlatformGroupID>ce7e5a28-1405-4994-ab46-67eb0bbbdc51</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <ApplicationIcon>game icon.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -72,13 +72,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Screens\Bosses\Attacks\BossAttack.cs" />
+    <Compile Include="Screens\Bosses\Attacks\ChaseCircles.cs" />
+    <Compile Include="Screens\Bosses\Attacks\RandomCircles.cs" />
+    <Compile Include="Screens\Bosses\Attacks\MovingCircles.cs" />
+    <Compile Include="Screens\Bosses\Attacks\TopBottom.cs" />
     <Compile Include="Screens\Bosses\Attacks\Spiral.cs" />
+    <Compile Include="Screens\Bosses\Boss3Screen.cs" />
+    <Compile Include="Screens\Bosses\Boss2Screen.cs" />
     <Compile Include="Screens\Bosses\BossScreen.cs" />
     <Compile Include="Screens\Bosses\Boss1Screen.cs" />
     <Compile Include="Screens\Bosses\BossMenu.cs" />
     <Compile Include="Screens\Bosses\Attacks\Projectile.cs" />
+    <Compile Include="Screens\Bosses\Win.cs" />
+    <Compile Include="Screens\Bosses\Dead.cs" />
+    <Compile Include="Screens\Inventory.cs" />
     <Compile Include="Screens\MainMenu.cs" />
-    <Compile Include="Screens\Shop.cs" />
+    <Compile Include="Screens\Intro.cs" />
+    <Compile Include="Screens\StartScreen.cs" />
+    <Compile Include="Screens\User %28bad%29\Player.cs" />
+    <Compile Include="Screens\ShopMenu.cs" />
+    <Compile Include="Screens\SubMenu.cs" />
     <Compile Include="Screens\Quit.cs" />
     <Compile Include="Screens\Screen.cs" />
     <Compile Include="Screens\ScreenManager.cs" />
@@ -93,6 +106,7 @@
     <Compile Include="TextureManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="game icon.ico" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
@@ -124,4 +138,5 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

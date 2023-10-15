@@ -6,6 +6,9 @@ using System;
 namespace Boss_Game_2._0.Screens
 {
     class MainMenu : Screen
+        /*
+         * Everything that has to do with the title screen
+         */
     {
         int selection; // currently selected screen & used to calculate arrow position
 
@@ -47,7 +50,7 @@ namespace Boss_Game_2._0.Screens
             else if (Game1.IsKeyPressed(Keys.Z))
             {
                 SelectionColor = Color.White;
-                ScreenManager.SetScreen(new Screen[] { ScreenManager.BossMenu, ScreenManager.Shop, ScreenManager.Quit }[selection]);
+                ScreenManager.SetScreen(new Screen[] { ScreenManager.BossMenu, ScreenManager.SubMenu, ScreenManager.Quit }[selection]);
             }
 
             Game1.UpdateOldKb();
@@ -57,6 +60,7 @@ namespace Boss_Game_2._0.Screens
         {
             spriteBatch.Draw(TextureManager.MainMenu.Menu, Window, Color.White);
             spriteBatch.Draw(TextureManager.Textures.RightArrow, new Rectangle(300, 500 + selection * 93, 32, 32), SelectionColor);
+            spriteBatch.Draw(TextureManager.MainMenu.PlayerModel, new Rectangle(650, 550, 186, 300), Color.White);
 
             if (showSelectionUnderline)
             {

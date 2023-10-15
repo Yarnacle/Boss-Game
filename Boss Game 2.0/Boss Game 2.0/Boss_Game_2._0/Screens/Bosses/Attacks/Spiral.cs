@@ -11,11 +11,12 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
         float angSpacing;
         int centerX;
         int centerY;
-        float xAccel;
-        float yAccel;
+        float xAccel; // Would make sense for both these to be called xVel and yVel
+        float yAccel; //     unless the bullets in the spiral accelerate.
         int projectileSize;
+        int numSpirals;
 
-        public Spiral(SpriteBatch spriteBatch, int centerX, int centerY, float angSpacing, float angSpeed, int projectileSpeed, float xAccel, float yAccel, int projectileSize) : base(spriteBatch, projectileSpeed)
+        public Spiral(SpriteBatch spriteBatch, int centerX, int centerY, float angSpacing, float angSpeed, int projectileSpeed, float xAccel, float yAccel, int projectileSize, int attackTime, int numSpirals) : base(spriteBatch, projectileSpeed)
         {
             this.angSpeed = angSpeed;
             this.angSpacing = angSpacing;
@@ -25,18 +26,24 @@ namespace Boss_Game_2._0.Screens.Bosses.Attacks
             this.xAccel = xAccel;
             this.yAccel = yAccel;
             this.projectileSize = projectileSize;
+            this.attackTime = attackTime;
+            this.numSpirals = numSpirals;
         }
 
         public override void Update(GameTime gameTime)
         {
             float angMoved = Math.Abs((float)timer.TotalSeconds * angSpeed);
             totalAngDisp += angMoved;
+
             
             if (angMoved >= angSpacing)
             {
                 if (isAttacking)
                 {
-                    projectiles.Add(new Projectile(spriteBatch, TextureManager.Textures.SolidFill, centerX, centerY, projectileSpeed * (float)Math.Cos(totalAngDisp), projectileSpeed * (float)Math.Sin(totalAngDisp), xAccel, yAccel, projectileSize));
+                    for(int i = 0; i < numSpirals; i++)
+                    {
+                        projectiles.Add(new Projectile(spriteBatch, TextureManager.Textures.SolidFill, centerX, centerY, projectileSpeed * ((float)Math.Cos(totalAngDisp + (2*Math.PI/numSpirals*i))), projectileSpeed * ((float)Math.Sin(totalAngDisp + (2 * Math.PI / numSpirals * i))), xAccel, yAccel, projectileSize));
+                    }
                 }
                 timer = TimeSpan.Zero;
             }

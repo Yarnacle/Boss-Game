@@ -8,13 +8,22 @@ using System.Dynamic;
 namespace Boss_Game_2._0.Screens
 {
     static class ScreenManager // 🐐
+       /* Class Description:
+        * Manages everything that gets drawn.
+        */
     {
         static SpriteBatch spriteBatch;
-
+        public static StartScreen StartScreen;
+        public static Intro Message;
         public static MainMenu MainMenu;
-        public static Shop Shop;
+        public static SubMenu SubMenu;
+        public static ShopMenu ShopMenu;
+        public static Inventory Inventory;
         public static Quit Quit;
         public static BossMenu BossMenu;
+        public static Dead Dead;
+        public static Win Win;
+
         public static dynamic Bosses;
 
         public static Screen currentScreen;
@@ -25,15 +34,21 @@ namespace Boss_Game_2._0.Screens
         {
             ScreenManager.spriteBatch = spriteBatch;
 
+            StartScreen = new StartScreen(spriteBatch);
+            Message = new Intro(spriteBatch);
             MainMenu = new MainMenu(spriteBatch);
-            Shop = new Shop(spriteBatch);
+            SubMenu = new SubMenu(spriteBatch);
+            Inventory = new Inventory(spriteBatch);
+            Dead = new Dead(spriteBatch);
+            Win = new Win(spriteBatch);
+            ShopMenu = new ShopMenu(spriteBatch);
             Quit = new Quit(spriteBatch, game1);
 
             BossMenu = new BossMenu(spriteBatch);
             Bosses = new ExpandoObject();
             Bosses.Boss1 = new Boss1Screen(spriteBatch);
         }
-        public static void SetScreen(Screen screen)
+        public static void SetScreen(Screen screen) // Set transitions here too
         {
             prevScreen = currentScreen;
             currentScreen = screen;
@@ -44,7 +59,7 @@ namespace Boss_Game_2._0.Screens
                     transition = new Transition2(spriteBatch, 4000, prevScreen);
                 }
                 else {
-                    transition = new Transition3(spriteBatch, 5000, prevScreen); // 5000 default speed
+                    transition = new Transition1(spriteBatch, 5000, prevScreen); // 5000 default speed
                 }
             }
         }
@@ -59,7 +74,7 @@ namespace Boss_Game_2._0.Screens
             {
                 transition.Start();
             }
-            else // if a transition is running, keep updating it
+            else // if a transition is runninzg, keep updating it
             {
                 transition.Update(gameTime);
 
